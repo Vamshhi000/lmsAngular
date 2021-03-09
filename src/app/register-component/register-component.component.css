@@ -1,0 +1,47 @@
+.example-card {
+    max-width: 400px;
+    margin-left: 34rem;
+    margin-top: 11rem;
+}
+  
+  
+.example-header-image {
+  background-image:url('file:///F:/chrome/ll.eps');
+  background-size: cover;
+}
+
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+ .loginerror{
+   
+  margin-left: 63rem;
+  margin-top: 4rem;
+ }
+ .loginerror1{
+   
+  margin-left: 63rem;
+  margin-top: 4rem;
+ }
+ .loginerror2{
+   color: red;
+  
+   }
+   .loginerror3{
+    color:green;
+   
+    }
+    .csdmd{
+      min-width: 100%;
+      padding: 60px 1rem;
+      display: block;
+      background: #0275d8;
+   
+  }

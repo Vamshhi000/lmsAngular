@@ -1,0 +1,114 @@
+<form class="example-form" [formGroup]="userform">
+
+
+
+
+    <mat-form-field class="example-full-width">
+      
+        <input matInput 
+               placeholder="First Name" formControlName='firstName'>
+
+               <mat-error  *ngIf="this.userform.get('firstName').touched || this.userform.get('firstName').errors" >
+               First Name should not below 5 letters & above 12 letters 
+              </mat-error>
+        
+        
+      </mat-form-field>
+
+
+      <mat-form-field class="example-full-width">
+      
+        <input matInput 
+               placeholder="Last Name" formControlName='lastName'>
+
+               <mat-error  *ngIf="this.userform.get('lastName').touched || this.userform.get('lastName').errors" >
+                Last name should not below 5 letters & above 12 letters 
+              </mat-error>
+        
+        
+      </mat-form-field>
+
+
+
+    <mat-form-field class="example-full-width">
+
+      <input matInput 
+             placeholder="Mobile No" formControlName='mobileNo'>
+
+             <mat-error  *ngIf="this.userform.get('mobileNo').errors && this.userform.get('mobileNo').errors.invalidNumber " >
+              Please enter a valid Mobile Number
+            </mat-error>
+      
+    </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+      <input matInput 
+             placeholder="Hall ticket No" formControlName='hallTicketno'>
+  
+             <mat-error  *ngIf="this.userform.get('hallTicketno').touched || this.userform.get('hallTicketno').errors" >
+              Enter a valid hall ticket number
+             </mat-error>
+    </mat-form-field>
+
+
+
+
+    <mat-form-field class="example-full-width">
+      <input matInput 
+             placeholder="College" formControlName='college'>
+  
+             <mat-error  *ngIf="this.userform.get('college').touched || this.userform.get('college').errors" >
+                College is required
+               </mat-error>
+
+    </mat-form-field>
+ 
+
+      <mat-form-field class="example-full-width">
+        <input matInput 
+               placeholder="Degree" formControlName='degree'>
+    
+               <mat-error  *ngIf="this.userform.get('degree').touched || this.userform.get('degree').errors" >
+                Degree is required
+                 </mat-error>
+  
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput 
+               placeholder="City" formControlName='city'>
+    
+               <mat-error  *ngIf="this.userform.get('city').touched || this.userform.get('city').errors" >
+                  City is required
+                 </mat-error>
+  
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput 
+               placeholder="State" formControlName='state'>
+    
+               <mat-error  *ngIf="this.userform.get('state').touched || this.userform.get('state').errors" >
+                  State is required
+                 </mat-error>
+  
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput 
+               placeholder="Pincode" formControlName='pincode'>
+    
+               <mat-error  *ngIf="this.userform.get('pincode').touched || this.userform.get('pincode').errors ||this.userform.get('pincode').errors.invalidNumber" >
+                Invalid pincode
+                 </mat-error>
+  
+      </mat-form-field>
+
+</form>
+ 
+ 
+ 
+ 
+ 
+ 
+  <div style="margin-left: 9rem;">
+  <button [disabled]="userform.invalid"  type="button" class="btn btn-primary "(click)='addCustomer()'>Register</button>
+
+</div>
